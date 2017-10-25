@@ -421,6 +421,9 @@ var PizzaFilters = {
 
 $("#meat").click(function () {
     filterPizza("м'ясні");
+    $(".active").addClass("inactive");
+    $("#meat").removeClass("inactive");
+    $("#meat").addClass("active");
     $(".all-pizzas").text("М'ясні піци");
     $(".pizza-number").text(filteredPizzas);
     filteredPizzas = 0;
@@ -428,6 +431,9 @@ $("#meat").click(function () {
 
 $("#pineapple").click(function () {
     filterPizza("з ананасами");
+    $(".active").addClass("inactive");
+    $("#pineapple").removeClass("inactive");
+    $("#pineapple").addClass("active");
     $(".all-pizzas").text("Піци з ананасами");
     $(".pizza-number").text(filteredPizzas);
     filteredPizzas = 0;
@@ -435,6 +441,9 @@ $("#pineapple").click(function () {
 
 $("#mushroom").click(function () {
     filterPizza("з грибами");
+    $(".active").addClass("inactive");
+    $("#mushroom").removeClass("inactive");
+    $("#mushroom").addClass("active");
     $(".all-pizzas").text("Піци з грибами");
     $(".pizza-number").text(filteredPizzas);
     filteredPizzas = 0;
@@ -442,6 +451,9 @@ $("#mushroom").click(function () {
 
 $("#seafood").click(function () {
     filterPizza("з морепродуктами");
+    $(".active").addClass("inactive");
+    $("#seafood").removeClass("inactive");
+    $("#seafood").addClass("active");
     $(".all-pizzas").text("Піци з морепродуктами");
     $(".pizza-number").text(filteredPizzas);
     filteredPizzas = 0;
@@ -449,6 +461,9 @@ $("#seafood").click(function () {
 
 $("#vegan").click(function () {
     filterPizza("вега");
+    $(".active").addClass("inactive");
+    $("#vegan").removeClass("inactive");
+    $("#vegan").addClass("active");
     $(".all-pizzas").text("Вегетаріанські піци");
     $(".pizza-number").text(filteredPizzas);
     filteredPizzas = 0;
@@ -456,6 +471,9 @@ $("#vegan").click(function () {
 
 $("#all").click(function () {
     initialiseMenu();
+    $(".active").addClass("inactive");
+    $("#all").removeClass("inactive");
+    $("#all").addClass("active");
     $(".all-pizzas").text("Усі піци");
     $(".pizza-number").text(8);
     filteredPizzas = 0;
