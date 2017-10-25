@@ -4,7 +4,19 @@
   position: relative;
 }
 
-.selected-category {
+.active:hover {
+  cursor: pointer;
+}
+
+.inactive:hover {
+  cursor: pointer;
+}
+
+.filters {
+  margin-top: 5px;
+}
+
+.active {
   color: white;
   background-color: #ff971b;
   border-radius: 4px;
@@ -12,8 +24,9 @@
   margin: 2px;
 }
 
-.category {
+.inactive {
   color: #ff971b;
+  background-color: white;
   padding: 10px;
   margin: 2px;
 }

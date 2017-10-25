@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Pizza</title>
 
-    <!-- Bootsrap CSS -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <!-- LESS основний файл -->
@@ -15,7 +15,6 @@
 
 </head>
 <body>
-<div id="cart"></div>
 
 <div class="pizza-kma">
     Pizza
@@ -51,21 +50,21 @@
         <div class="row" id="category_container">
             <div class="col-md 12 top">
             <span class="holder">
-                <span class="all-pizzas"><b>Усі піци</b></span>
+                <span class="all-pizzas">Усі піци</span>
                 <span class="pizza-number">
-                    <span><b>8</b></span>
+                    <span>8</span>
                 </span>
             </span>
 
             </div>
-            <div class="col-md 12 bottom">
+            <div class="col-md 12 bottom filters">
                 <div class="categories">
-                    <span class="selected-category">Усі</span>
-                    <span class="category">М'ясні</span>
-                    <span class="category">З ананасами</span>
-                    <span class="category">З грибами</span>
-                    <span class="category">З морепродуктами</span>
-                    <span class="category">Вега</span>
+                    <span id="all" class="active">Усі</span>
+                    <span id="meat" class="inactive">М'ясні</span>
+                    <span id="pineapple" class="inactive">З ананасами</span>
+                    <span id="mushroom" class="inactive">З грибами</span>
+                    <span id="seafood" class="inactive">З морепродуктами</span>
+                    <span id="vegan" class="inactive">Вега</span>
                 </div>
             </div>
         </div>
@@ -447,117 +446,13 @@
     <div class="heading">
         <span class="cart-orders">
             <span class="title"><b>Замовлення</b></span>
-            <span class="count-label">3</span>
+            <span class="count-label">0</span>
         </span>
         <span class="clear-order">Очистити замовлення</span>
     </div>
 
-    <div class="ordered-pizza">
-        <div class="one-pizza">
-            <div class="pizza-name">
-                BBQ (Мала)
-            </div>
-            <div class="measurement">
-                <img src="assets/images/size-icon.svg">
-                <span class="radius">30</spaN>
-                <img src="assets/images/weight.svg">
-                <span class="weight">370</span>
-            </div>
-            <div class="quantity">
-                <div class="order-cost">
-                    <span class="cost">
-                        556грн
-                    </span>
-                    <span class="edit-quantity">
-                        <button class="btn btn-danger minus">
-                            <i class="glyphicon glyphicon-minus"></i>
-                        </button>
-                        <span class="label label-default count">
-                            4
-                        </span>
-                        <button class="btn btn-success plus">
-                            <i class="glyphicon glyphicon-plus"></i>
-                        </button>
-                        <button class="btn btn-default delete">
-                            <i class="glyphicon glyphicon-remove"></i>
-                        </button>
-                        <span>
-                            <img src="assets/images/pizza_2.jpg" class="pizza-img">
-                        </span>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="one-pizza">
-            <div class="pizza-name">
-                Росо Густо(Мала)
-            </div>
-            <div class="measurement">
-                <img src="assets/images/size-icon.svg">
-                <span class="radius">30</spaN>
-                <img src="assets/images/weight.svg">
-                <span class="weight">400</span>
-            </div>
-            <div class="quantity">
-                <div class="order-cost">
-                    <span class="cost">
-                        189грн
-                    </span>
-                    <span class="edit-quantity">
-                        <button class="btn btn-danger minus">
-                            <i class="glyphicon glyphicon-minus"></i>
-                        </button>
-                        <span class="label label-default count">
-                            1
-                        </span>
-                        <button class="btn btn-success plus">
-                            <i class="glyphicon glyphicon-plus"></i>
-                        </button>
-                        <button class="btn btn-default delete">
-                            <i class="glyphicon glyphicon-remove"></i>
-                        </button>
-                        <span>
-                            <img src="assets/images/pizza_4.jpg" class="pizza-img">
-                        </span>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="one-pizza">
-            <div class="pizza-name">
-                Міксовий поло(Велика)
-            </div>
-            <div class="measurement">
-                <img src="assets/images/size-icon.svg">
-                <span class="radius">40</spaN>
-                <img src="assets/images/weight.svg">
-                <span class="weight">780</span>
-            </div>
-            <div class="quantity">
-                <div class="order-cost">
-                    <span class="cost">
-                        179грн
-                    </span>
-                    <span class="edit-quantity">
-                        <button class="btn btn-danger minus">
-                            <i class="glyphicon glyphicon-minus"></i>
-                        </button>
-                        <span class="label label-default count">
-                            4
-                        </span>
-                        <button class="btn btn-success plus">
-                            <i class="glyphicon glyphicon-plus"></i>
-                        </button>
-                        <button class="btn btn-default delete">
-                            <i class="glyphicon glyphicon-remove"></i>
-                        </button>
-                        <span>
-                            <img src="assets/images/pizza_1.jpg" class="pizza-img">
-                        </span>
-                    </span>
-                </div>
-            </div>
-        </div>
+    <div id="cart" class="ordered-pizza">
+
     </div>
 
     <div class="order">
@@ -566,7 +461,7 @@
                 <b>Сума замовлення</b>
             </span>
             <span class="sum-value">
-                <b>924 грн</b>
+                0 грн
             </span>
         </div>
 
@@ -593,10 +488,10 @@
 <!-- jQuery JavaScript -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
 
-<!--Bootsrap JavaScript -->
+<!--Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <!--Own JavaScript -->
-<!--<script type="text/javascript"  src="assets/js/main.js"> </script>-->
+<script type="text/javascript"  src="assets/js/main.js"> </script>
 </body>
 </html>

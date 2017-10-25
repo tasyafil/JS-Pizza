@@ -8,8 +8,9 @@ var pizza_info = [
         icon:'assets/images/pizza_7.jpg',
         title: "Імпреза",
         type: 'М’ясна піца',
+        filters: ["з ананасами", "м'ясні"],
         content: {
-            meat: ['балик', 'салямі'],
+            meat: ['Балик', 'салямі'],
             chicken: ['куриця'],
             cheese: ['сир моцарелла', 'сир рокфорд'],
             pineapple: ['ананаси'],
@@ -34,8 +35,9 @@ var pizza_info = [
         icon:'assets/images/pizza_2.jpg',
         title: "BBQ",
         type: 'М’ясна піца',
+        filters: ["з грибами", "м'ясні"],
         content: {
-            meat: ['мисливські ковбаски', 'ковбаски папероні', 'шинка'],
+            meat: ['Мисливські ковбаски', 'ковбаски папероні', 'шинка'],
             cheese: ['сир домашній'],
             mushroom: ['шампінйони'],
             additional: ['петрушка', 'оливки']
@@ -57,8 +59,9 @@ var pizza_info = [
         icon:'assets/images/pizza_1.jpg',
         title: "Міксовий поло",
         type: 'М’ясна піца',
+        filters: ["з ананасами", "м'ясні"],
         content: {
-            meat: ['вітчина', 'куриця копчена'],
+            meat: ['Вітчина', 'куриця копчена'],
             cheese: ['сир моцарелла'],
             pineapple: ['ананаси'],
             additional: ['кукурудза', 'петрушка', 'соус томатний']
@@ -79,8 +82,9 @@ var pizza_info = [
         icon:'assets/images/pizza_5.jpg',
         title: "Сициліано",
         type: 'М’ясна піца',
+        filters: ["з грибами", "м'ясні"],
         content: {
-            meat: ['вітчина', 'салямі'],
+            meat: ['Вітчина', 'салямі'],
             cheese: ['сир моцарелла'],
             mushroom: ['шампінйони'],
             additional: ['перець болгарський',  'соус томатний']
@@ -101,8 +105,9 @@ var pizza_info = [
         icon:'assets/images/pizza_3.jpg',
         title: "Маргарита",
         type: 'Вега піца',
+        filters: ["вега"],
         content: {
-            cheese: ['сир моцарелла', 'сир домашній'],
+            cheese: ['Сир моцарелла', 'сир домашній'],
             tomato: ['помідори'],
             additional: ['базилік', 'оливкова олія', 'соус томатний']
         },
@@ -117,8 +122,9 @@ var pizza_info = [
         icon:'assets/images/pizza_6.jpg',
         title: "Мікс смаків",
         type: 'М’ясна піца',
+        filters: ["з грибами", "м'ясні", "з ананасами"],
         content: {
-            meat: ['ковбаски'],
+            meat: ['Ковбаски'],
             cheese: ['сир моцарелла'],
             mushroom: ['шампінйони'],
             pineapple: ['ананаси'],
@@ -140,8 +146,9 @@ var pizza_info = [
         icon:'assets/images/pizza_8.jpg',
         title: "Дольче Маре",
         type: 'Морська піца',
+        filters: ["з морепродуктами"],
         content: {
-            ocean: ['криветки тигрові', 'мідії', 'ікра червона', 'філе червоної риби'],
+            ocean: ['Криветки тигрові', 'мідії', 'ікра червона', 'філе червоної риби'],
             cheese: ['сир моцарелла'],
             additional: ['оливкова олія', 'вершки']
         },
@@ -156,8 +163,9 @@ var pizza_info = [
         icon:'assets/images/pizza_4.jpg',
         title: "Россо Густо",
         type: 'Морська піца',
+        filters: ["з морепродуктами"],
         content: {
-            ocean: ['ікра червона', 'лосось копчений'],
+            ocean: ['Ікра червона', 'лосось копчений'],
             cheese: ['сир моцарелла'],
             additional: ['оливкова олія', 'вершки']
         },
