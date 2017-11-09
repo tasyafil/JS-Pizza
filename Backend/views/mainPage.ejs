@@ -1,49 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Pizza</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
-    <!-- LESS основний файл -->
-    <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
-    <!-- LESS JavaScript компілятор -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-
-
-</head>
-<body>
-
-<div class="pizza-kma">
-    Pizza
-    <br>
-    KMA
-    <!--<img src="assets/images/discount.svg" class="flipped">-->
-</div>
-
-<div class="top-overlay-container">
-    <div class="row">
-        <div class="col-md-12 upper">
-            <span class="number-info">(044) 222 5 222</span>
-            <span class="available-info">24 години/7 днів на тиждень</span>
-            <span class="delivery-info">Безкоштовна доставка піци</span>
-
-            <span id="btn">
-                <button	type="button" class="btn btn-warning sign-in">Ввійти</button>
-            </span>
-        </div>
-
-        <div class="col-md-12 lower">
-            <span class="pizza-title">
-                Піца
-            </span>
-        </div>
-    </div>
-
-
-</div>
+<% include common/header.ejs %>
 
 <div class="main-container">
     <div class="category-container">
@@ -432,66 +387,9 @@
         </div>
     </div>
 
-    <div class="page-foot">
-        <div class="practice-project">
-            Pizza.22 - практичний проект в межах курсу Javascript в Києво-Могилянській Академії
-        </div>
-        <div class="no-delivery">
-            Доставка піци не здійснюється
-        </div>
-    </div>
-</div>
-
-<div class="pizza-cart">
-    <div class="heading">
-        <span class="cart-orders">
-            <span class="title"><b>Замовлення</b></span>
-            <span class="count-label">0</span>
-        </span>
-        <span class="clear-order">Очистити замовлення</span>
-    </div>
-
-    <div id="cart" class="ordered-pizza">
-
-    </div>
-
-    <div class="order">
-        <div class="total-cost">
-            <span class="sum-title">
-                <b>Сума замовлення</b>
-            </span>
-            <span class="sum-value">
-                0 грн
-            </span>
-        </div>
-
-        <div class="order-button">
-            <a href="#" class="btn btn-warning order-btn">Замовити</a>
-        </div>
-    </div>
+    <% include common/footer.ejs %>
 
 </div>
 
-<div class="discount">
 
-    <div>
-        <!--<img src="assets/images/discount.svg" class="upfront">-->
-        Цього
-        <br>
-        Тижня
-        <br>
-        На все
-    </div>
-    <div>-20%</div>
-</div>
-
-<!-- jQuery JavaScript -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
-
-<!--Bootstrap JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-<!--Own JavaScript -->
-<script type="text/javascript"  src="assets/js/main.js"> </script>
-</body>
-</html>
+<% include common/cart.ejs %>

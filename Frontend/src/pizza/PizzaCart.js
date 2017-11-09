@@ -3,6 +3,7 @@
  */
 var Templates = require('../Templates');
 var Storage = require('./Storage');
+var API = require('../API');
 
 var totalValue = 0;
 var orderNumber = 0;
@@ -175,6 +176,24 @@ function updateCart() {
 
 }
 
+$(".next-step-button").click(function () {
+    createOrder();
+})
+
+function createOrder() {
+    API.createOrder( {
+        name: $("#inputName").val(),
+        phone: $("#inputPhone").val(),
+        order: Cart
+    }), function (err, callback) {
+        if (err) {
+            alert("can't create order")
+        } else {
+            console.log(callback);
+        }
+    }
+}
+
 exports.removeFromCart = removeFromCart;
 exports.addToCart = addToCart;
 
@@ -183,3 +202,5 @@ exports.initialiseCart = initialiseCart;
 
 exports.clearCart = clearCart;
 exports.PizzaSize = PizzaSize;
+
+exports.createOrder = createOrder;
