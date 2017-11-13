@@ -1,91 +1,264 @@
 <% include common/header.ejs %>
 
-<div class="order-container">
-    <div class="contact-form">
-        <div class="contacts">1. Контактні дані</div>
+<div class="left-part">
+    <div class="order-container" >
+        <div class="contact-form">
+            <div class="contacts">1. Контактні дані</div>
 
-        <div class="row">
-            <form class="form-horizontal">
-                <div class="form-group" id="name-group">
-                    <label for="inputName" class="col-sm-2 control-label">Ім'я</label>
-                    <div class="col-sm-10">
-                        <script>
-                            function myFunction() {
-                                if (/^[A-Za-z]+$/.test($("#inputName").val())) {
-                                    //alert("has-success");
-                                    $("#name-group").removeClass("form-group");
-                                    $("#name-group").removeClass("form-group has-error");
-                                    $("#name-group").addClass("form-group has-success");
-                                    $(".help-block").removeClass("error");
-                                } else {
-                                    //alert("has-error");
-                                    $("#name-group").removeClass("form-group");
-                                    $("#name-group").removeClass("form-group has-error");
-                                    $("#name-group").addClass("form-group has-error");
-                                    $(".help-block").addClass("error");
-                                }
-                            }
-                        </script>
-                        <input type="text" class="form-control" id="inputName" onkeydown="setTimeout(myFunction, 0);"
-                               onkeypress="setTimeout(myFunction, 0);" placeholder="Ім'я Прізвище">
-                    </div>
-                    <span class="help-block">
+            <div class="row">
+                <div class="col-md-6">
+                    <form class="form-horizontal">
+                        <div class="form-group" id="name-group">
+                            <label for="inputName" class="col-sm-2 control-label">Ім'я</label>
+                            <div class="col-sm-10">
+                                <script>
+                                    function myFunction() {
+                                        if (/^[A-Za-z]+$/.test($("#inputName").val())) {
+                                            //alert("has-success");
+                                            $("#name-group").removeClass("form-group");
+                                            $("#name-group").removeClass("form-group has-error");
+                                            $("#name-group").addClass("form-group has-success");
+                                            $(".help-block").removeClass("error");
+                                        } else {
+                                            //alert("has-error");
+                                            $("#name-group").removeClass("form-group");
+                                            $("#name-group").removeClass("form-group has-error");
+                                            $("#name-group").addClass("form-group has-error");
+                                            $(".help-block").addClass("error");
+                                        }
+                                    }
+                                </script>
+                                <input type="text" class="form-control" id="inputName" onkeydown="setTimeout(myFunction, 0);"
+                                       placeholder="Ім'я Прізвище">
+                            </div>
+                            <span class="help-block">
                         Введіть тільки власне ім’я, без цифр
                     </span>
-                </div>
+                        </div>
 
-                <div class="form-group" id="phone-group">
-                    <label for="inputPhone" class="col-sm-2 control-label">Телефон</label>
-                    <div class="col-sm-10">
-                        <script>
-                            function myFunction2() {
-                                if (/^0([0-9]{9})$/.test($("#inputPhone").val())
-                                    || /^\+380([0-9]{9})$/.test($("#inputPhone").val())) {
-                                    //alert("has-success");
-                                    $("#phone-group").removeClass("form-group");
-                                    $("#phone-group").removeClass("form-group has-error");
-                                    $("#phone-group").addClass("form-group has-success");
-                                    $(".phone-help-block").removeClass("error");
-                                } else {
-                                    //alert("has-error");
-                                    $("#phone-group").removeClass("form-group");
-                                    $("#phone-group").removeClass("form-group success");
-                                    $("#phone-group").addClass("form-group has-error");
-                                    $(".phone-help-block").addClass("error");
-                                }
-                            }
-                        </script>
-                        <input type="text" class="form-control" id="inputPhone" onkeydown="setTimeout(myFunction2, 0);"
-                               onkeypress="setTimeout(myFunction2, 0);" placeholder="+380991234567">
-                    </div>
-                    <span class="phone-help-block">
+                        <div class="form-group" id="phone-group">
+                            <label for="inputPhone" class="col-sm-2 control-label">Телефон</label>
+                            <div class="col-sm-10">
+                                <script>
+                                    function myFunction2() {
+                                        if (/^0([0-9]{9})$/.test($("#inputPhone").val())
+                                            || /^\+380([0-9]{9})$/.test($("#inputPhone").val())) {
+                                            //alert("has-success");
+                                            $("#phone-group").removeClass("form-group");
+                                            $("#phone-group").removeClass("form-group has-error");
+                                            $("#phone-group").addClass("form-group has-success");
+                                            $(".phone-help-block").removeClass("error");
+                                        } else {
+                                            //alert("has-error");
+                                            $("#phone-group").removeClass("form-group");
+                                            $("#phone-group").removeClass("form-group success");
+                                            $("#phone-group").addClass("form-group has-error");
+                                            $(".phone-help-block").addClass("error");
+                                        }
+                                    }
+                                </script>
+                                <input type="text" class="form-control" id="inputPhone" onkeydown="setTimeout(myFunction2, 0);"
+                                        placeholder="+380991234567">
+                            </div>
+                            <span class="phone-help-block">
                         Введіть номер телефону у форматі +380 або почніть з 0
                     </span>
-                </div>
+                        </div>
 
-                <div class="form-group address-group">
-                    <label for="inputAddress" class="col-sm-2 control-label">Адреса</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Київ, вул. Гарматна, 24">
+                        <div class="form-group address-group" id="address-group">
+                            <label for="inputAddress" class="col-sm-2 control-label">Адреса</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputAddress" onkeydown="setTimeout(check, 3000);"
+                                       placeholder="Київ, вул. Гарматна, 24">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-5 order-summary">
+                    <div class="bs-callout bs-callout-warning">
+                        <h4>Інформація про замовлення</h4>
+                            <b> Приблизний час доставки:</b>
+                            <p id="order-summary-time">
+                                невідомий
+                            </p>
+                        </p>
+                            <b>Адреса доставки:</b>
+                            <p id="order-summary-address">
+                            невідома
+                            </p>
+                        </p>
                     </div>
                 </div>
-            </form>
+            </div>
+
+            <div class="row" style="margin-top: 5px;">
+                <div class="form-group next-step-wrap">
+                    <div class="next-step-width">
+                        <button type="button" class="btn btn-warning next-step-button">
+                            Далі
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="row">
-            <div class="form-group next-step-wrap">
-                <div class="next-step-width">
-                    <button type="button" class="btn btn-warning next-step-button">
-                        Далі
-                    </button>
-                </div>
+        <div class="map-wrap">
+            <div id="googleMap">
+
             </div>
         </div>
 
+        <script>
+            var map;
+            var directionsService = new google.maps.DirectionsService;
+            var directionsDisplay = new google.maps.DirectionsRenderer;
+
+            function initialize() {
+
+
+                var mapProp = {
+                    center:	new	google.maps.LatLng(50.464379,30.519131),
+                    zoom: 13
+                };
+                var html_element = document.getElementById("googleMap");
+                map	= new google.maps.Map(html_element,	mapProp);
+                marker.setMap(map);
+                directionsDisplay.setMap(map);
+
+                var pizzaAddress = geocodeLatLng(point, function (err, address) {
+                    if (!err) {
+                        pizzaAddress = address;
+                    } else {
+                        console.log("err");
+                    }
+                })
+
+                google.maps.event.addListener(map,
+                    'click',function(me){
+                        var coordinates	= me.latLng;
+                        geocodeLatLng(coordinates, function(err, adress){
+                            if(!err) {
+                                //Дізналися адресу
+                                console.log(adress);
+                                $("#inputAddress").val(adress);
+                                $("#order-summary-address").text(adress);
+                                $("#address-group").removeClass("form-group");
+                                $("#address-group").addClass("form-group has-success");
+                                calculateAndDisplayRoute(directionsService, directionsDisplay, pizzaAddress, adress);
+                            } else {
+                                console.log("Немає адреси")
+                            }
+                        })
+                    });
+            }
+
+            function calculateAndDisplayRoute(directionsService, directionsDisplay, A_Latlng, B_Latlng) {
+                directionsService.route({
+                    origin: A_Latlng,
+                    destination: B_Latlng,
+                    travelMode: 'DRIVING'
+                }, function(response, status) {
+                    if (status === 'OK') {
+                        directionsDisplay.setDirections(response);
+                        $("#order-summary-address").text(B_Latlng);
+                        $("#order-summary-time").text(directionsDisplay.directions.routes[0].legs[0].duration.text);
+                        $("#address-group").removeClass("form-group");
+                        $("#address-group").addClass("form-group has-success");
+                    } else {
+                        $("#address-group").removeClass("form-group has-success");
+                        $("#address-group").addClass("form-group");
+                    }
+                });
+            }
+
+            function geocodeAddress(adress,	 callback)	{
+                var geocoder = new	google.maps.Geocoder();
+                geocoder.geocode({'address': address}, function(results, status)	{
+                    if	(status	===	google.maps.GeocoderStatus.OK&&	results[0])	{
+                        var coordinates	= results[0].geometry.location;
+                        callback(null, coordinates);
+                    }	else {
+                        callback(new Error("Can	not	find the address"));
+                    }
+                });
+            }
+
+            function geocodeLatLng(latlng, callback){
+                var geocoder = new	google.maps.Geocoder();
+                geocoder.geocode({'location': latlng}, function(results, status)	{
+                    if	(status	===	google.maps.GeocoderStatus.OK&&	results[1])	{
+                        var adress = results[1].formatted_address;
+                        callback(null, adress);
+                    }	else {
+                        callback(new Error("Can't find adress"));
+                    }
+                });
+            }
+
+            function calculateRoute(A_latlng, B_latlng, callback)	{
+                var directionService =	new	google.maps.DirectionsService();
+                directionService.route({
+                    origin:	A_latlng,
+                    destination: B_latlng,
+                    travelMode:	google.maps.TravelMode["DRIVING"]
+                },	function(response, status) {
+                    if	(status	== google.maps.DirectionsStatus.OK )	{
+                        varleg = response.routes[0].legs[0];
+                        callback(null, {
+                            duration: leg.duration
+                        });
+                    } else {
+                        callback(new Error("Can not find direction"));
+                    }
+                });
+            }
+
+            function check() {
+                var address = $("#inputAddress").val();
+                console.log(address);
+                calculateAndDisplayRoute(directionsService,directionsDisplay, pizzaAddress, address);
+            }
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+            var point = new google.maps.LatLng(50.464379,30.519131);
+            var marker = new google.maps.Marker({
+                position: point,
+                animation: google.maps.Animation.DROP,
+                icon: "assets/images/map-icon.png"
+            });
+
+            var pizzaAddress = geocodeLatLng(point, function (err, address) {
+                if (!err) {
+                    pizzaAddress = address;
+                } else {
+                    console.log("err");
+                }
+            })
+        </script>
+
+        <% include common/footer.ejs %>
     </div>
-
-
 </div>
 
 <% include common/fixedCart.ejs %>
+
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<script type="text/javascript"  src="assets/js/main.js"> </script>
+
+</body>
+</html>
+
+
+
+
 
