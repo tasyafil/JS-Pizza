@@ -13,7 +13,8 @@
                             <div class="col-sm-10">
                                 <script>
                                     function myFunction() {
-                                        if (/^[A-Za-z]+$/.test($("#inputName").val())) {
+                                        if (/^([a-zA-Zа-яА-Я]+|[a-zA-Zа-яА-Я]+[ ][a-zA-Zа-яА-Я]+|([a-zA-Zа-яА-Я]+[\-][a-zA-Zа-яА-Я]+))+$/
+                                                .test($("#inputName").val())) {
                                             //alert("has-success");
                                             $("#name-group").removeClass("form-group");
                                             $("#name-group").removeClass("form-group has-error");
@@ -243,6 +244,8 @@
         <% include common/footer.ejs %>
     </div>
 </div>
+
+<div id="liqpay"></div>
 
 <% include common/fixedCart.ejs %>
 
